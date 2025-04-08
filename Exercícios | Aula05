@@ -1,0 +1,31 @@
+//Atividade verificadora de aprendizagem
+//Q1:
+
+int potencia(int x, int n) {
+    if (n == 0)
+        return 1;
+    else
+        return x * potencia(x, n - 1);
+}
+
+//Q2:
+
+int doisElevadoA(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return 2 * doisElevadoA(n - 1);
+}
+
+
+//Q3:
+
+int funcao(int a, int b) { // considere a > b
+    if (b == 0)
+        return a;
+    else
+        return f(b, a % b);
+}
+
+//exemplo Q3: funcao(20, 8) -> Retorna 4
+

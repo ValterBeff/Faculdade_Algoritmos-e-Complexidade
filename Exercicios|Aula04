@@ -60,3 +60,31 @@ int main()
 // -> 2^5 (rec): 32
 // -> 2^5 (iter): 32
 // -> Media: 30
+
+/Aprenda + - Questão 2
+
+#include <iostream>
+using namespace std;
+
+int func_soma(int n) {
+    int i, j, sum = 0;
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n * n; j++) {
+            sum++;
+        }
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    cout << "Digite o valor de n: ";
+    cin >> n;
+
+    int resultado = func_soma(n);
+    cout << "Resultado: " << resultado << endl;
+
+    return 0;
+}
+
+

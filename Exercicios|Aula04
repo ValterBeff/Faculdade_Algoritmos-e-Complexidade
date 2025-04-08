@@ -1,0 +1,62 @@
+#include <iostream>
+#include <vector>
+
+int potencia(int a, int n)
+{
+    if (n == 0)
+        return 1;
+    else
+        return a * potencia(a, n - 1);
+}
+
+int potenciaDeDois(int n)
+{
+    if (n == 0)
+        return 1;
+    else
+        return 2 * potenciaDeDois(n - 1);
+}
+
+int potenciaDeDoisIterativo(int n)
+{
+    int resultado = 1;
+    for (int i = 0; i < n; i++)
+    {
+        resultado *= 2;
+    }
+    return resultado;
+}
+
+#include <vector>
+
+double mediaAritmetica(const std::vector<int> &valores)
+{
+    if (valores.empty())
+        return 0.0;
+
+    int soma = 0;
+    for (int valor : valores)
+    {
+        soma += valor;
+    }
+
+    return static_cast<double>(soma) / valores.size();
+}
+
+int main()
+{
+    std::cout << "Potencia(3, 4): " << potencia(3, 4) << std::endl;
+    std::cout << "2^5 (rec): " << potenciaDeDois(5) << std::endl;
+    std::cout << "2^5 (iter): " << potenciaDeDoisIterativo(5) << std::endl;
+
+    std::vector<int> dados = {10, 20, 30, 40, 50};
+    std::cout << "Media: " << mediaAritmetica(dados) << std::endl;
+
+    return 0;
+}
+
+// Respota:
+// -> Potencia(3, 4): 81
+// -> 2^5 (rec): 32
+// -> 2^5 (iter): 32
+// -> Media: 30
